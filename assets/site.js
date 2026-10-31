@@ -26,10 +26,14 @@
   if(!btn) return;
   function glyph(){ btn.textContent = document.documentElement.getAttribute("data-theme")==="dark" ? "☀" : "☾"; }
   glyph();
-  btn.addEventListener("click",function(){
+  function toggle(){
     var next = document.documentElement.getAttribute("data-theme")==="dark" ? "light" : "dark";
     document.documentElement.setAttribute("data-theme",next);
     try{ localStorage.setItem("guild-theme",next); }catch(e){}
     glyph();
+  }
+  btn.addEventListener("click",toggle);
+  document.addEventListener("click",function(e){
+    if(e.target && e.target.id==="themeBtn" && e.target!==btn){ toggle(); }
   });
 })();
