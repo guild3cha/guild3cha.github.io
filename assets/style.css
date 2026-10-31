@@ -171,3 +171,88 @@ details.faq-item[open ] summary::after{content:"－";}
 .article .backlinks{margin-top:40px;border-top:1px solid var(--line);padding-top:20px;display:flex;gap:26px;flex-wrap:wrap;font-size:14px;}
 .article .backlinks a{color:var(--blue);}
 .page-head{max-width:900px;margin:0 auto;padding:52px 24px 0;text-align:center;}
+
+/* --- v3: new hero, responsive polish, dark mode --- */
+:root{
+  --bg:#ffffff;
+  --surface:#ffffff;
+  --surface-alt:#F7F9FC;
+  --text:#222222;
+  --text-sub:#444444;
+  --text-mut:#555555;
+  --accent:#0D4688;
+  --accent-btn:#0D4688;
+  --gold-text:#9a7b14;
+  color-scheme:light;
+}
+img{max-width:100%;}
+
+/* Hero: show the whole portrait photo (no cropping of the baked-in catch copy),
+   with a blurred cover copy of the same photo filling the sides on wide screens. */
+.hero{position:relative;max-width:1180px;margin:0 auto;overflow:hidden;background:#0e0f11;}
+.hero::before{content:"";position:absolute;inset:0;background:url("images/hero-event.jpg") center/cover no-repeat;filter:blur(28px) brightness(.72);transform:scale(1.15);}
+.hero img.photo{position:relative;display:block;width:auto;height:auto;max-width:min(600px,100%);max-height:82vh;margin:0 auto;object-fit:contain;}
+
+@media(max-width:720px){
+  .header-logo{height:36px;}
+  .header-cta{padding:5px 12px;font-size:12px;}
+  .hero-sub .hero-btns .btn{width:min(330px,88vw);text-align:center;}
+  .news-row{gap:10px;padding:15px 2px;}
+  .news-row .date{min-width:88px;}
+  .news-row .arrow{display:none;}
+  .sec-head h2{font-size:21px;}
+  .article{padding-top:38px;}
+}
+
+/* Dark mode: follows the OS/browser setting automatically. */
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#121417;
+    --surface:#1A1D21;
+    --surface-alt:#1E2126;
+    --text:#ECEEF1;
+    --text-sub:#C7CBD1;
+    --text-mut:#AEB4BC;
+    --line:#34383F;
+    --accent:#8FBCEA;
+    --accent-btn:#2E6DAE;
+    --gold-text:#E0C169;
+    color-scheme:dark;
+  }
+  body{background:var(--bg);color:var(--text);}
+  header{background:var(--bg);}
+  .burger span{background:var(--text);}
+  .header-cta{border-color:var(--accent);color:var(--accent);background:transparent;}
+  nav.topnav a:hover{color:var(--accent);}
+  .mobilenav{background:var(--bg);}
+  .mobilenav a{border-color:var(--line);}
+  .mobilenav a:hover{background:var(--surface-alt);color:var(--accent);}
+  /* logos sit on white artwork: give them a small white plate so they don't float as harsh rectangles */
+  .header-logo{background:#fff;border-radius:6px;padding:2px 3px;}
+  .hero-logo{background:#fff;border-radius:12px;padding:12px 16px;}
+  footer img{background:#fff;border-radius:10px;padding:6px 8px;}
+  .hero::before{filter:blur(28px) brightness(.5);}
+  .hero-sub .sub{color:var(--text-mut);}
+  .stat .num{color:var(--accent);}
+  .stat .lbl,.sec-head .en,.card .date,.past .cap,.chips .cap{color:var(--text-mut);}
+  .sec-lead,.story,.about-item p,.act p,.past,.work p,.step p,details.faq-item .a{color:var(--text-sub);}
+  .about-item,.act,.step{border-color:var(--line);}
+  .act h3 .tag,.nchip{color:var(--gold-text);border-color:var(--gold);}
+  .nchip.blue{color:var(--accent);border-color:var(--accent);}
+  .chip{border-color:var(--line);color:var(--text-sub);}
+  a.news-row:hover .ttl,a.card:hover .ttl{color:var(--accent);}
+  .work .price{color:var(--accent);}
+  .cta-band{background:var(--surface-alt);}
+  .step{background:var(--surface);}
+  .btn-solid{background:var(--accent-btn);border-color:var(--accent-btn);color:#fff;}
+  .btn-outline{background:transparent;color:var(--accent);border-color:var(--accent);}
+  .sns-btns a{background:var(--surface);border-color:#4a4f57;color:var(--text-sub);}
+  .sns-btns a:hover{border-color:var(--accent);color:var(--accent);}
+  .more a{border-color:#4a4f57;}
+  .to-top{background:var(--surface);border-color:var(--accent);color:var(--accent);}
+  details.faq-item summary span{color:var(--accent);}
+  details.faq-item .a span{color:var(--gold-text);}
+  .faq-item .q span{color:var(--accent);}
+  footer a,.article .backlinks a{color:var(--accent);}
+  .footer-nav a:hover{color:var(--accent);}
+}
