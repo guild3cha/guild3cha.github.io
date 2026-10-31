@@ -30,3 +30,11 @@
 ## 本番運用についてのメモ
 - 本命の構成（Astro＋Pages CMS＋Cloudflare Pages、記事をフォームから編集できる形）は `guild-astro-site/` に別途用意済み。このPages版は「とりあえず公開する」ための先行公開用で、後から同じGitHubリポジトリ／アカウントのまま移行できる
 - 独自ドメインを使う場合は Settings > Pages > Custom domain から追加する
+
+## v2（2026-11-01）完成版への改修
+- メニュー再編：デスクトップは「GUILDについて／活動紹介／お知らせ・活動実績／作品・頒布物／よくある質問／入会案内」の6項目に整理。「お問い合わせ」はSNSセクション（#links）へ統合
+- モバイルメニューを実装：ハンバーガーボタンで開閉するパネル（従来は装飾のみで動作しなかった）。動作は `assets/site.js`
+- お知らせ・活動実績を独立ページ化：一覧 `news/index.html` と記事6本（c109／emotional／sancha-2026／comiket108／setacon／game-event）。トップのお知らせ行と活動実績カード、作品画像から各記事へリンク
+- 記事の追加方法：`news/` の既存記事を複製して日付・タイトル・本文・写真を差し替え、`news/index.html` の一覧とトップの該当行／カードのリンクを更新する
+- FAQをアコーディオン（details要素）化、フッターにメニュー追加、ページ上部へ戻るボタン追加
+- OGP／canonical を公開URL（https://guild3cha.github.io/guild-official-site/）の絶対URLに変更、`robots.txt` と `sitemap.xml` を追加、404は絶対パス化（深い階層でも崩れないように）

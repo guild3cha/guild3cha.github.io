@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://guild3cha.github.io/guild-official-site/sitemap.xml

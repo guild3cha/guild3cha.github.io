@@ -8,7 +8,10 @@
 <meta property="og:title" content="サブカル研究会GUILD 公式サイト">
 <meta property="og:description" content="アニメ・マンガ・ゲームが好きな学生が集まる、日本大学の公認サークルです。">
 <meta property="og:type" content="website">
-<meta property="og:image" content="assets/images/keyvisual-airship.jpg">
+<meta property="og:url" content="https://guild3cha.github.io/guild-official-site/">
+<meta property="og:image" content="https://guild3cha.github.io/guild-official-site/assets/images/keyvisual-airship.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://guild3cha.github.io/guild-official-site/">
 <link rel="icon" href="assets/images/compass-mark.png">
 <link rel="stylesheet" href="assets/style.css">
 </head>
@@ -16,14 +19,24 @@
 
 <header>
   <div class="header-in">
-    <div class="burger"><span></span><span></span><span></span></div>
-    <img class="header-logo" src="assets/images/compass-mark.png" alt="GUILD">
+    <button class="burger" id="menuBtn" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
+    <a href="./" aria-label="サブカル研究会GUILD トップページ"><img class="header-logo" src="assets/images/compass-mark.png" alt="GUILD"></a>
     <a class="header-cta" href="#join">入会案内</a>
   </div>
-  <nav class="topnav">
+  <nav class="topnav" aria-label="メインメニュー">
     <div class="wrap">
-      <a href="#about">GUILDについて</a><a href="#activities">活動紹介</a><a href="#works">作品</a><a href="#news">お知らせ</a><a href="#join">入会案内</a><a href="#links">お問い合わせ</a>
+      <a href="#about">GUILDについて</a><a href="#activities">活動紹介</a><a href="news/">お知らせ・活動実績</a><a href="#works">作品・頒布物</a><a href="#faq">よくある質問</a><a href="#join">入会案内</a>
     </div>
+  </nav>
+  <nav class="mobilenav" id="mobileNav" aria-label="モバイルメニュー">
+    <a href="#about">GUILDについて</a>
+    <a href="#activities">活動紹介</a>
+    <a href="news/">お知らせ・活動実績</a>
+    <a href="#works">作品・頒布物</a>
+    <a href="#faq">よくある質問</a>
+    <a href="#join">入会案内</a>
+    <a href="#links">各種SNS・お問い合わせ</a>
+    <a href="https://w.atwiki.jp/guild3chawiki/" target="_blank" rel="noopener">ギルペディア（wiki）</a>
   </nav>
 </header>
 
@@ -89,9 +102,9 @@
     <div class="wrap">
       <div class="sec-head"><div class="line"></div><h2>お知らせ</h2><div class="en">NEWS</div></div>
       <div class="news-list">
-        <div class="news-row"><span class="date">出展予定</span><span class="nchip">告知</span><span class="ttl">冬コミ（C109）2日目に同人ソフト枠で出展予定です（日大文理ゲーム制作会と合同出展）</span></div>
-        <div class="news-row"><span class="date">制作中</span><span class="nchip blue">作品</span><span class="ttl">ノベルゲーム『導きのエモーショナル』新作は、冬コミでの完成を予定しています</span></div>
-        <div class="news-row"><span class="date">2026.10.18</span><span class="nchip blue">活動報告</span><span class="ttl">第10回三茶祭、無事終了しました！</span></div>
+        <a class="news-row" href="news/c109.html"><span class="date">出展予定</span><span class="nchip">告知</span><span class="ttl">冬コミ（C109）2日目に同人ソフト枠で出展予定です（日大文理ゲーム制作会と合同出展）</span><span class="arrow">→</span></a>
+        <a class="news-row" href="news/emotional.html"><span class="date">制作中</span><span class="nchip blue">作品</span><span class="ttl">ノベルゲーム『導きのエモーショナル』新作は、冬コミでの完成を予定しています</span><span class="arrow">→</span></a>
+        <a class="news-row" href="news/sancha-2026.html"><span class="date">2026.10.18</span><span class="nchip blue">活動報告</span><span class="ttl">第10回三茶祭、無事終了しました！</span><span class="arrow">→</span></a>
       </div>
     </div>
   </section>
@@ -100,16 +113,16 @@
     <div class="wrap">
       <div class="sec-head"><div class="line"></div><h2>活動実績</h2><div class="en">REPORTS</div></div>
       <div class="cards">
-        <a class="card" href="#reports"><img src="assets/images/photo-sancha-group.jpg" alt="三茶祭"><div class="date">2026.10.17,18</div><div class="ttl">第10回三茶祭、無事終了しました！</div></a>
-        <a class="card" href="#reports"><img src="assets/images/card-comike108.jpg" alt="コミケ108お品書き"><div class="date">2026.07.23</div><div class="ttl">コミケ108のお品書きがついに完成しました！</div></a>
-        <a class="card" href="#reports"><img src="assets/images/card-setacon.jpg" alt="日本SF大会 せたこん"><div class="date">2026.07.11</div><div class="ttl">第65回日本SF大会の主催団体となりました！</div></a>
-        <a class="card" href="#reports"><img src="assets/images/card-game-event.jpg" alt="合同イベント"><div class="date">2026.06.28</div><div class="ttl">日大文理ゲーム制作会と合同でイベントを開催！</div></a>
+        <a class="card" href="news/sancha-2026.html"><img src="assets/images/photo-sancha-group.jpg" alt="三茶祭" loading="lazy"><div class="date">2026.10.17,18</div><div class="ttl">第10回三茶祭、無事終了しました！</div></a>
+        <a class="card" href="news/comiket108.html"><img src="assets/images/card-comike108.jpg" alt="コミケ108お品書き" loading="lazy"><div class="date">2026.07.23</div><div class="ttl">コミケ108のお品書きがついに完成しました！</div></a>
+        <a class="card" href="news/setacon.html"><img src="assets/images/card-setacon.jpg" alt="日本SF大会 せたこん" loading="lazy"><div class="date">2026.07.11</div><div class="ttl">第65回日本SF大会の主催団体となりました！</div></a>
+        <a class="card" href="news/game-event.html"><img src="assets/images/card-game-event.jpg" alt="合同イベント" loading="lazy"><div class="date">2026.06.28</div><div class="ttl">日大文理ゲーム制作会と合同でイベントを開催！</div></a>
       </div>
       <div class="past">
         <div class="cap">これまでの主な実績</div>
         日本SF大会への参加（2025年）／冬コミC105・夏コミC106への出店／ニコニコ超会議への参加／日大新聞への掲載／三茶キャンパスアンバサダーのInstagramへの掲載
       </div>
-      <div class="more"><a href="#news">お知らせを見る</a></div>
+      <div class="more"><a href="news/">お知らせ・活動実績をもっと見る</a></div>
     </div>
   </section>
 
@@ -127,8 +140,8 @@
     <div class="wrap">
       <div class="sec-head"><div class="line"></div><h2>作品・頒布物</h2><div class="en">WORKS</div></div>
       <div class="works">
-        <div class="work"><img src="assets/images/card-comike108.jpg" alt="シリウス2号"><h3>『シリウス』第2号</h3><p>サブカル総合評論誌。アニメやゲーム、社会や哲学まで、多角的な論考を集めた一冊です。<span class="price">¥1,000</span></p></div>
-        <div class="work"><img src="assets/images/work-emotional.jpg" alt="イベント頒布の様子"><h3>『導きのエモーショナル』</h3><p>メンバー制作のノベルゲーム。新作『導きのエモーショナル――輪廻を超えた“愛”はナナイトと共に』は冬コミ（C109）での完成を予定しています。イベントではデモ版を頒布。<span class="price">デモ ¥500</span></p></div>
+        <div class="work"><a href="news/comiket108.html"><img src="assets/images/card-comike108.jpg" alt="シリウス2号" loading="lazy"></a><h3>『シリウス』第2号</h3><p>サブカル総合評論誌。アニメやゲーム、社会や哲学まで、多角的な論考を集めた一冊です。<span class="price">¥1,000</span></p></div>
+        <div class="work"><a href="news/emotional.html"><img src="assets/images/work-emotional.jpg" alt="イベント頒布の様子" loading="lazy"></a><h3>『導きのエモーショナル』</h3><p>メンバー制作のノベルゲーム。新作『導きのエモーショナル――輪廻を超えた“愛”はナナイトと共に』は冬コミ（C109）での完成を予定しています。イベントではデモ版を頒布。<span class="price">デモ ¥500</span></p></div>
       </div>
       <div class="portfolio">
         <div>自主ゲームの制作・販売</div>
@@ -143,9 +156,9 @@
     <div class="wrap">
       <div class="sec-head"><div class="line"></div><h2>よくある質問</h2><div class="en">FAQ</div></div>
       <div class="faq">
-        <div class="faq-item"><div class="q"><span>Q</span>アニメやゲームの知識がなくても大丈夫ですか？</div><div class="a"><span>A</span>大丈夫です。詳しい人ばかりではありません。「好き」という気持ちがあれば十分です。活動に参加しながら自然に詳しくなっていきます。</div></div>
-        <div class="faq-item"><div class="q"><span>Q</span>三軒茶屋と下高井戸、どちらの学生でも入れますか？</div><div class="a"><span>A</span>はい。GUILDは両キャンパスで公認されている合同サークルで、どちらのキャンパスの学生も参加できます。オンライン（Discord）の活動もあります。</div></div>
-        <div class="faq-item"><div class="q"><span>Q</span>入会はいつでもできますか？</div><div class="a"><span>A</span>新規メンバーは随時募集中です。まずはXかInstagramのDMで連絡してください。見学してから決めることもできます。質問だけでも歓迎です。</div></div>
+        <details class="faq-item"><summary class="q"><span>Q</span>アニメやゲームの知識がなくても大丈夫ですか？</summary><div class="a"><span>A</span>大丈夫です。詳しい人ばかりではありません。「好き」という気持ちがあれば十分です。活動に参加しながら自然に詳しくなっていきます。</div></details>
+        <details class="faq-item"><summary class="q"><span>Q</span>三軒茶屋と下高井戸、どちらの学生でも入れますか？</summary><div class="a"><span>A</span>はい。GUILDは両キャンパスで公認されている合同サークルで、どちらのキャンパスの学生も参加できます。オンライン（Discord）の活動もあります。</div></details>
+        <details class="faq-item"><summary class="q"><span>Q</span>入会はいつでもできますか？</summary><div class="a"><span>A</span>新規メンバーは随時募集中です。まずはXかInstagramのDMで連絡してください。見学してから決めることもできます。質問だけでも歓迎です。</div></details>
       </div>
     </div>
   </section>
@@ -174,13 +187,18 @@
 </main>
 
 <footer>
-  <img src="assets/images/compass-mark.png" alt="">
+  <img src="assets/images/compass-mark.png" alt="GUILD コンパスマーク">
   <div class="fname">サブカル研究会GUILD</div>
   <p>日本大学三軒茶屋キャンパス　〒154-8513 東京都世田谷区下馬3丁目34-1<br>
   日本大学下高井戸キャンパス　〒156-8550 東京都世田谷区桜上水3丁目25-40<br>
   詳しい情報は公式wiki「<a href="https://w.atwiki.jp/guild3chawiki/">ギルペディア</a>」にも掲載しています。<br>
   © 2026 Subculture Club GUILD</p>
+  <nav class="footer-nav" aria-label="フッターメニュー">
+    <a href="#about">GUILDについて</a><a href="#activities">活動紹介</a><a href="news/">お知らせ・活動実績</a><a href="#works">作品・頒布物</a><a href="#faq">よくある質問</a><a href="#join">入会案内</a>
+  </nav>
 </footer>
 
+<button class="to-top" id="toTop" aria-label="ページの先頭へ戻る">↑</button>
+<script src="assets/site.js"></script>
 </body>
 </html>
