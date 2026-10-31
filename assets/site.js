@@ -19,3 +19,17 @@
     top.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
   }
 })();
+
+// Theme toggle (the initial theme is stamped on <html data-theme> by the inline head script)
+(function(){
+  var btn=document.getElementById("themeBtn");
+  if(!btn) return;
+  function glyph(){ btn.textContent = document.documentElement.getAttribute("data-theme")==="dark" ? "☀" : "☾"; }
+  glyph();
+  btn.addEventListener("click",function(){
+    var next = document.documentElement.getAttribute("data-theme")==="dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme",next);
+    try{ localStorage.setItem("guild-theme",next); }catch(e){}
+    glyph();
+  });
+})();

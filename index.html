@@ -17,6 +17,7 @@
 <link rel="canonical" href="https://guild3cha.github.io/guild-official-site/">
 <link rel="icon" href="assets/images/compass-mark.png">
 <link rel="stylesheet" href="assets/style.css">
+<script>(function(){try{var t=localStorage.getItem("guild-theme");if(t!=="dark"&&t!=="light"){t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}document.documentElement.setAttribute("data-theme",t);}catch(e){document.documentElement.setAttribute("data-theme","light");}})();</script>
 </head>
 <body>
 
@@ -24,7 +25,7 @@
   <div class="header-in">
     <button class="burger" id="menuBtn" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
     <a href="./" aria-label="サブカル研究会GUILD トップページ"><img class="header-logo" src="assets/images/compass-mark.png" alt="GUILD"></a>
-    <a class="header-cta" href="#join">入会案内</a>
+    <div class="header-actions"><button class="theme-btn" id="themeBtn" type="button" aria-label="ライトモードとダークモードを切り替える" title="ライト／ダーク切替">☾</button><a class="header-cta" href="#join">入会案内</a></div>
   </div>
   <nav class="topnav" aria-label="メインメニュー">
     <div class="wrap">
@@ -44,7 +45,7 @@
 </header>
 
 <main>
-  <img class="hero-logo" src="assets/images/logo-horizontal.jpg" alt="Subculture Club GUILD">
+  <img class="hero-logo" src="assets/images/logo-horizontal.png" alt="Subculture Club GUILD">
   <div class="hero">
     <img class="photo" src="assets/images/hero-event.jpg" alt="イベントで出展するGUILDのブースとメンバー。写真には「ヲタ活ぶつける青春を創ろう」の文字" fetchpriority="high">
   </div>
