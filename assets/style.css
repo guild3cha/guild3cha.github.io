@@ -274,5 +274,6 @@ header{transition:background-color .25s ease;}
 
 .logo-dark{display:none;}
 :root[data-theme="dark"] .logo-light{display:none;}
-:root[data-theme="dark"] .logo-dark{display:block;}
+:root[data-theme="dark"] .logo-dark{display:inline-block;}
+:root[data-theme="dark"] .hero-logo.logo-dark{display:block;}
 @media(max-width:720px){.header-in{position:relative;}.header-in .logo-link{position:absolute;left:50%;transform:translateX(-50%);}}
