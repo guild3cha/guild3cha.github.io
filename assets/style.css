@@ -277,3 +277,7 @@ header{transition:background-color .25s ease;}
 :root[data-theme="dark"] .logo-dark{display:inline-block;}
 :root[data-theme="dark"] .hero-logo.logo-dark{display:block;}
 @media(max-width:720px){.header-in{position:relative;}.header-in .logo-link{position:absolute;left:50%;transform:translateX(-50%);}}
+
+.daily-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:28px;}
+.daily-grid img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;border-radius:10px;}
+@media(max-width:640px){.daily-grid{grid-template-columns:repeat(2,1fr);}}
